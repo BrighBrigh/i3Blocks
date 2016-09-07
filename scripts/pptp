@@ -1,8 +1,11 @@
 #!/bin/bash
+#Created by Brian Winkler
+#Licensed under the GPL
+#See more scripts at https://github.com/BrighBrigh/i3Blocks
+#And check out my Linux blog at https://nuxview.blogspot.com/
 
 
-
-##Check VPN status
+##Check PPTP status
 GET_PPTP=$(ip addr show | grep pp0 | cut -d ' ' -f2 | cut -d ':' -f1)
 
 ##Store status in STATUS
@@ -14,7 +17,7 @@ else
 fi
 
 
-
+#Print status
 echo $STATUS
 echo $STATUS
 
