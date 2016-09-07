@@ -6,6 +6,8 @@
 
 
 ##Check PPTP status
+##Edit this file to show a unique output for when you have PPTP tunneling turned on
+##Change "ppp0" in both places to fit your needs
 GET_PPTP=$(ip addr show | grep pp0 | cut -d ' ' -f2 | cut -d ':' -f1)
 
 ##Store status in STATUS
