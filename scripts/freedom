@@ -3,10 +3,10 @@
 
 
 ##Check VPN status
-GET_PPTP=$(ip addr show | grep pp0 | cut -d ' ' -f2 | cut -d ':' -f1)
+GET_FREEDOM=$(pgrep sshuttle)
 
 ##Store status in STATUS
-if [[ $GET_PPTP == *"ppp0"* ]]
+if [[ $GET_FREEDOM > 0 ]]
 then   
     STATUS=ON
 else
@@ -23,8 +23,8 @@ echo $STATUS
 ##Colors
 if [[ "$STATUS" == "ON" ]]
 then
-    echo "#00ff00"
+    echo "#72ee7f"
 else
-    echo "#ff0000"
+    echo "#ee7272"
 fi
 

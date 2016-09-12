@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+echo "${USER}"
+echo "${USER}"
+echo "#ffece0"
+
+if [[ $(id -u) -eq 0 ]]; then
+  exit 33
+fi

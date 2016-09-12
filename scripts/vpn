@@ -1,13 +1,8 @@
 #!/bin/bash
-#Created by Brian Winkler
-#Licensed under the GPL
-#See more scripts at https://github.com/BrighBrigh/i3Blocks
-#And check out my Linux blog at https://nuxview.blogspot.com/
+
 
 
 ##Check VPN status
-##Edit this to be specific to an output when your VPN is on
-##Do this by replacing "tun0" in both places
 GET_VPN=$(nmcli con show | grep tun0 | cut -d ' ' -f1)
 
 ##Store status in STATUS
@@ -19,7 +14,7 @@ else
 fi
 
 
-#Print status
+
 echo $STATUS
 echo $STATUS
 
@@ -28,8 +23,8 @@ echo $STATUS
 ##Colors
 if [[ "$STATUS" == "ON" ]]
 then
-    echo "#00ff00"
+    echo "#72ee7f"
 else
-    echo "#ff0000"
+    echo "#ee7272"
 fi
 
