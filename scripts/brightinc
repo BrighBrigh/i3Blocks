@@ -1,0 +1,21 @@
+#!/bin/bash
+#Created by Brian Winkler
+
+#This script is free to use and modify as your own
+
+#Check out my blog at https://nuxview.blogspot.com/
+
+
+STATUS="$(xbacklight -get)"
+CHECK="${STATUS}"
+
+if [[ $CHECK == 0.000000 ]]
+
+then
+	xbacklight -inc 1
+	pkill -RTMIN+1 i3blocks
+
+else
+	xbacklight -inc 10
+	pkill -RTMIN+1 i3blocks
+fi
